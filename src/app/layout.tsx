@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Snow from "@/components/Snow";
 import WelcomeModal from "@/components/WelcomeModal";
+import AudioPlayer from "@/components/AudioPlayer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Snow />
         <WelcomeModal />
+        <AudioPlayer />
         {children}
       </body>
     </html>
