@@ -61,7 +61,7 @@ export default function Footer() {
               THE QUEST LOG
             </h3>
             <p className="mt-1 text-[10px] text-muted tracking-wider">
-              @2026 Deghne Gabriel Agana. All rights reserved.
+              © 2026 Deghne Gabriel Agana. All rights reserved.
             </p>
           </motion.div>
 

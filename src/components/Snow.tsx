@@ -40,8 +40,8 @@ export default function Embers() {
         id: i,
         left: `${Math.random() * 100}%`,
         size: Math.random() * 4 + 2,
-        duration: Math.random() * 6 + 6,
-        delay: -(Math.random() * 12),
+        duration: Math.random() * 20 + 20,
+        delay: -(Math.random() * 30),
       });
     }
     setParticles(root);
