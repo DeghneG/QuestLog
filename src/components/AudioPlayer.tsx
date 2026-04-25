@@ -10,7 +10,43 @@ export default function AudioPlayer() {
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.2; // Set volume low as requested
+      audioRef.current.volume = 0.2; // minimal volume
+      
+      // Attempt auto-play immediately
+      const tryPlay = async () => {
+        try {
+          await audioRef.current?.play();
+          setIsPlaying(true);
+        } catch (err) {
+          // Auto-play blocked by browser
+          console.warn("Autoplay prevented, waiting for user interaction");
+        }
+      };
+      
+      tryPlay();
+
+      // Fallback: start playing on first user interaction anywhere on the page
+      const handleInteraction = async () => {
+        if (audioRef.current && audioRef.current.paused) {
+          try {
+            await audioRef.current.play();
+            setIsPlaying(true);
+          } catch (err) {
+            // Still prevented
+          }
+        }
+        // Remove listeners once it plays
+        document.removeEventListener("click", handleInteraction);
+        document.removeEventListener("keydown", handleInteraction);
+      };
+
+      document.addEventListener("click", handleInteraction);
+      document.addEventListener("keydown", handleInteraction);
+
+      return () => {
+        document.removeEventListener("click", handleInteraction);
+        document.removeEventListener("keydown", handleInteraction);
+      };
     }
   }, []);
 
@@ -32,7 +68,7 @@ export default function AudioPlayer() {
 
   return (
     <>
-      <audio ref={audioRef} src="/bg-music.mp3" loop preload="auto" />
+      <audio ref={audioRef} src="/bg-music.mp3" loop preload="auto" autoPlay />
       <motion.button
         onClick={togglePlay}
         initial={{ opacity: 0, scale: 0.8 }}
