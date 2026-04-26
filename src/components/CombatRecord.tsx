@@ -78,6 +78,7 @@ export default function CombatRecord() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
+                className="h-full"
               >
                 <GameCard {...game} />
               </motion.div>

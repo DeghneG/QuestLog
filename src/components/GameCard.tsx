@@ -45,7 +45,7 @@ export default function GameCard({
       transition={{ duration: 0.5 }}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
-      className={`relative bg-card-bg border rounded-lg overflow-hidden transition-all duration-300 cursor-pointer ${
+      className={`relative bg-card-bg border rounded-lg overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col ${
         hovered
           ? "border-gamer-red/50 shadow-[0_0_20px_rgba(230,57,70,0.15)]"
           : "border-card-border"
@@ -53,7 +53,7 @@ export default function GameCard({
       onClick={() => setExpanded(!expanded)}
     >
       {/* Card header */}
-      <div className="p-5">
+      <div className="p-5 flex-grow">
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
             {icon && (
@@ -142,7 +142,7 @@ export default function GameCard({
       </AnimatePresence>
 
       {/* Expand toggle footer */}
-      <div className="flex items-center justify-center py-2 bg-surface/50 border-t border-white/5">
+      <div className="flex items-center justify-center py-2 bg-surface/50 border-t border-white/5 mt-auto">
         <motion.div
           animate={{ rotate: expanded ? 180 : 0 }}
           transition={{ duration: 0.3 }}
