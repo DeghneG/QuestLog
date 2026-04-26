@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp, Trophy, Target, Star, Swords, Shield, Flame } from "lucide-react";
+import Image from "next/image";
 
 interface GameStat {
   label: string;
@@ -16,6 +17,7 @@ interface GameCardProps {
   stats: GameStat[];
   highlights: string[];
   description?: string;
+  icon?: React.ReactNode;
   accentTag?: string;
   ign?: string;
 }
@@ -27,6 +29,7 @@ export default function GameCard({
   stats,
   highlights,
   description,
+  icon,
   accentTag,
   ign,
 }: GameCardProps) {
@@ -53,6 +56,11 @@ export default function GameCard({
       <div className="p-5 flex-grow">
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
+            {icon && (
+              <div className="text-gamer-red/80 w-10 h-10 shrink-0 flex items-center justify-center bg-black/40 rounded-md border border-white/5 overflow-hidden">
+                {icon}
+              </div>
+            )}
             <div>
               <h3 className="text-sm font-bold text-white tracking-wide uppercase">
                 {title}
@@ -212,6 +220,7 @@ export const gameData: GameCardProps[] = [
     title: "CrossFire",
     rank: "VETERAN",
     ign: "IGN: Quickscope.X",
+    icon: <Image src="/crossfire.jpg" alt="Crossfire" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "experience", value: "~10 years" },
     ],
