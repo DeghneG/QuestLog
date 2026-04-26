@@ -13,8 +13,11 @@ const vaultGames = [
   { name: "COD Mobile", category: "FPS" },
   { name: "Valorant", category: "FPS" },
   { name: "LOL", category: "MOBA" },
-  { name: "DOTA", category: "MOBA" },
+  { name: "Dota 2", category: "MOBA" },
   { name: "Mobile Legends: BangBang", category: "MOBA" },
+  { name: "Honor of Kings", category: "MOBA" },
+  { name: "Team Fight Tactics", category: "Strategy" },
+  { name: "Albion Online", category: "RPG" },
   { name: "AC Odyssey", category: "RPG" },
   { name: "AC Mirage", category: "RPG" },
   { name: "Fortnite", category: "BR" },
@@ -22,12 +25,12 @@ const vaultGames = [
   { name: "DragonBall: XS", category: "Fighting" },
   { name: "NBA 2K20", category: "Sports" },
   { name: "Portal", category: "Puzzle" },
-  { name: "FC 2025", category: "Sports" },
+  { name: "F1 2021", category: "Racing" },
   { name: "Resident Evil Franchise", category: "Horror" },
   { name: "Left 4 Dead", category: "Survival" },
 ];
 
-const categories = ["All", "FPS", "MOBA", "Sandbox", "RPG", "BR", "Sports", "Fighting", "Horror", "Survival", "Puzzle", "Studio"];
+const categories = ["All", "FPS", "MOBA", "Sandbox", "RPG", "BR", "Sports", "Fighting", "Horror", "Survival", "Puzzle", "Racing", "Strategy", "Studio"];
 
 export default function Vault() {
   const [activeFilter, setActiveFilter] = useState("All");
