@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp, Trophy, Target, Star, Swords, Shield, Flame } from "lucide-react";
-import Image from "next/image";
 
 interface GameStat {
   label: string;
@@ -17,7 +16,6 @@ interface GameCardProps {
   stats: GameStat[];
   highlights: string[];
   description?: string;
-  icon?: React.ReactNode;
   accentTag?: string;
   ign?: string;
 }
@@ -29,7 +27,6 @@ export default function GameCard({
   stats,
   highlights,
   description,
-  icon,
   accentTag,
   ign,
 }: GameCardProps) {
@@ -56,11 +53,6 @@ export default function GameCard({
       <div className="p-5 flex-grow">
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
-            {icon && (
-              <div className="text-gamer-red/80 w-10 h-10 shrink-0 flex items-center justify-center bg-black/40 rounded-md border border-white/5 overflow-hidden">
-                {icon}
-              </div>
-            )}
             <div>
               <h3 className="text-sm font-bold text-white tracking-wide uppercase">
                 {title}
@@ -171,7 +163,6 @@ export const gameData: GameCardProps[] = [
     title: "League of Legends",
     rank: "EMERALD I",
     ign: "IGN: CSC Jeanina",
-    icon: <Image src="/league.jpg" alt="League of Legends" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "matches", value: "40+" },
       { label: "peak rank", value: "Emerald I" },
@@ -188,7 +179,6 @@ export const gameData: GameCardProps[] = [
     title: "Valorant",
     rank: "ASCENDANT I",
     ign: "IGN: Gabzimoo",
-    icon: <Image src="/valorant.jpg" alt="Valorant" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "peak rank", value: "Ascendant 1" },
       { label: "headshot %", value: "20%" },
@@ -206,7 +196,6 @@ export const gameData: GameCardProps[] = [
     title: "Mobile Legends",
     rank: "MYTHICAL IMMORTAL",
     ign: "IGN: Gab Presko",
-    icon: <Image src="/mel.jpg" alt="Mobile Legends" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "local heroes", value: "~10" },
       { label: "role", value: "EXP Laner" },
@@ -223,7 +212,6 @@ export const gameData: GameCardProps[] = [
     title: "CrossFire",
     rank: "VETERAN",
     ign: "IGN: Quickscope.X",
-    icon: <Image src="/crossfire.jpg" alt="Crossfire" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "experience", value: "~10 years" },
     ],
@@ -239,7 +227,6 @@ export const gameData: GameCardProps[] = [
     title: "Rules of Survival",
     rank: "GRANDMASTER",
     ign: "IGN: ProfessorInSpire",
-    icon: <Image src="/rule.jpg" alt="Rules of Survival" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "wins", value: "700+" },
     ],
@@ -255,7 +242,6 @@ export const gameData: GameCardProps[] = [
     title: "Bloodstrike",
     rank: "MYTHIC",
     ign: "IGN: NE Gabzimo",
-    icon: <Image src="/strike.jpg" alt="Bloodstrike" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "points", value: "50,027" },
       { label: "global rank", value: "Top 151" },
