@@ -45,7 +45,7 @@ export default function GameCard({
       transition={{ duration: 0.5 }}
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
-      className={`relative bg-card-bg border rounded-lg overflow-hidden transition-all duration-300 cursor-pointer flex flex-col ${
+      className={`relative bg-card-bg border rounded-lg overflow-hidden transition-all duration-300 cursor-pointer flex flex-col min-h-[280px] ${
         hovered
           ? "border-gamer-red shadow-[0_0_8px_rgba(230,57,70,0.8),inset_0_0_4px_rgba(230,57,70,0.4)]"
           : "border-card-border"
