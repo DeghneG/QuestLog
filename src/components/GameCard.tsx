@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp, Trophy, Target, Star, Swords, Shield, Flame } from "lucide-react";
 import Image from "next/image";
@@ -34,20 +34,7 @@ export default function GameCard({
   ign,
 }: GameCardProps) {
   const [expanded, setExpanded] = useState(false);
-  const [hoverState, setHoverState] = useState<"idle" | "flaming" | "smoking">("idle");
-
-  useEffect(() => {
-    let t1: number, t2: number;
-    if (hoverState === "flaming") {
-      t1 = window.setTimeout(() => setHoverState("smoking"), 1000);
-    } else if (hoverState === "smoking") {
-      t2 = window.setTimeout(() => setHoverState("idle"), 1000);
-    }
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-    };
-  }, [hoverState]);
+  const [hovered, setHovered] = useState(false);
 
   return (
     <motion.div
@@ -56,13 +43,11 @@ export default function GameCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5 }}
-      onHoverStart={() => setHoverState("flaming")}
-      onHoverEnd={() => setHoverState("idle")}
-      className={`relative bg-card-bg border rounded-lg overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col ${
-        hoverState === "flaming"
-          ? "border-gamer-red shadow-[0_0_20px_rgba(230,57,70,0.6),inset_0_0_10px_rgba(230,57,70,0.3)]"
-          : hoverState === "smoking"
-          ? "border-gray-500 shadow-[0_0_15px_rgba(150,150,150,0.4),inset_0_0_10px_rgba(150,150,150,0.2)]"
+      onHoverStart={() => setHovered(true)}
+      onHoverEnd={() => setHovered(false)}
+      className={`relative bg-card-bg border rounded-lg overflow-hidden transition-all duration-300 cursor-pointer flex flex-col ${
+        hovered
+          ? "border-gamer-red shadow-[0_0_8px_rgba(230,57,70,0.8),inset_0_0_4px_rgba(230,57,70,0.4)]"
           : "border-card-border"
       }`}
       onClick={() => setExpanded(!expanded)}
@@ -92,7 +77,7 @@ export default function GameCard({
           </div>
           {accentTag && (
             <motion.span
-              animate={hoverState !== "idle" ? { scale: 1.05 } : { scale: 1 }}
+              animate={hovered ? { scale: 1.05 } : { scale: 1 }}
               className="px-2.5 py-1 text-[10px] font-bold tracking-wider uppercase bg-gamer-red text-white rounded"
             >
               {accentTag}
@@ -171,14 +156,8 @@ export default function GameCard({
 
       {/* Hover red glow line at bottom */}
       <motion.div
-        animate={{ opacity: hoverState !== "idle" ? 1 : 0 }}
-        className={`absolute bottom-0 left-0 right-0 h-[2px] transition-colors duration-300 ${
-          hoverState === "flaming"
-            ? "bg-gradient-to-r from-transparent via-gamer-red to-transparent"
-            : hoverState === "smoking"
-            ? "bg-gradient-to-r from-transparent via-gray-500 to-transparent"
-            : ""
-        }`}
+        animate={{ opacity: hovered ? 1 : 0 }}
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gamer-red to-transparent"
       />
     </motion.div>
   );

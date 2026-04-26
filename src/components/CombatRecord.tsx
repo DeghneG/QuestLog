@@ -68,7 +68,7 @@ export default function CombatRecord() {
             transition={{ duration: 0.3 }}
             className={
               viewMode === "grid"
-                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-start"
                 : "flex flex-col gap-4"
             }
           >
@@ -78,7 +78,6 @@ export default function CombatRecord() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="h-full"
               >
                 <GameCard {...game} />
               </motion.div>
