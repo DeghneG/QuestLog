@@ -47,7 +47,7 @@ export default function GameCard({
       onHoverEnd={() => setHovered(false)}
       className={`relative bg-card-bg border rounded-lg overflow-hidden transition-all duration-300 cursor-pointer h-full flex flex-col ${
         hovered
-          ? "border-gamer-red/50 shadow-[0_0_20px_rgba(230,57,70,0.15)]"
+          ? "border-gamer-red shadow-[0_0_15px_rgba(230,57,70,0.5),inset_0_0_10px_rgba(230,57,70,0.2)]"
           : "border-card-border"
       }`}
       onClick={() => setExpanded(!expanded)}
@@ -171,6 +171,7 @@ export const gameData: GameCardProps[] = [
     title: "League of Legends",
     rank: "EMERALD I",
     ign: "IGN: CSC Jeanina",
+    icon: <Image src="/league.jpg" alt="League of Legends" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "matches", value: "40+" },
       { label: "peak rank", value: "Emerald I" },
@@ -187,6 +188,7 @@ export const gameData: GameCardProps[] = [
     title: "Valorant",
     rank: "ASCENDANT I",
     ign: "IGN: Gabzimoo",
+    icon: <Image src="/valorant.jpg" alt="Valorant" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "peak rank", value: "Ascendant 1" },
       { label: "headshot %", value: "20%" },
@@ -204,6 +206,7 @@ export const gameData: GameCardProps[] = [
     title: "Mobile Legends",
     rank: "MYTHICAL IMMORTAL",
     ign: "IGN: Gab Presko",
+    icon: <Image src="/mel.jpg" alt="Mobile Legends" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "local heroes", value: "~10" },
       { label: "role", value: "EXP Laner" },
@@ -236,6 +239,7 @@ export const gameData: GameCardProps[] = [
     title: "Rules of Survival",
     rank: "GRANDMASTER",
     ign: "IGN: ProfessorInSpire",
+    icon: <Image src="/rule.jpg" alt="Rules of Survival" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "wins", value: "700+" },
     ],
@@ -251,6 +255,7 @@ export const gameData: GameCardProps[] = [
     title: "Bloodstrike",
     rank: "MYTHIC",
     ign: "IGN: NE Gabzimo",
+    icon: <Image src="/strike.jpg" alt="Bloodstrike" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "points", value: "50,027" },
       { label: "global rank", value: "Top 151" },
