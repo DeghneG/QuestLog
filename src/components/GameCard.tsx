@@ -57,7 +57,9 @@ export default function GameCard({
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
             {icon && (
-              <div className="text-gamer-red/80">{icon}</div>
+              <div className="text-gamer-red/80 w-10 h-10 shrink-0 flex items-center justify-center bg-black/40 rounded-md border border-white/5 overflow-hidden">
+                {icon}
+              </div>
             )}
             <div>
               <h3 className="text-sm font-bold text-white tracking-wide uppercase">
@@ -169,7 +171,7 @@ export const gameData: GameCardProps[] = [
     title: "League of Legends",
     rank: "EMERALD I",
     ign: "IGN: CSC Jeanina",
-    icon: <div className="p-1.5 bg-black rounded border border-white/5"><Image src="/lolb.png" alt="League of Legends" width={32} height={32} className="object-contain" /></div>,
+    icon: <Image src="/league.jpg" alt="League of Legends" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "matches", value: "40+" },
       { label: "peak rank", value: "Emerald I" },
@@ -186,7 +188,7 @@ export const gameData: GameCardProps[] = [
     title: "Valorant",
     rank: "ASCENDANT I",
     ign: "IGN: Gabzimoo",
-    icon: <div className="p-1.5 bg-black rounded border border-white/5"><Image src="/valob.png" alt="Valorant" width={32} height={32} className="object-contain" /></div>,
+    icon: <Image src="/valorant.jpg" alt="Valorant" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "peak rank", value: "Ascendant 1" },
       { label: "headshot %", value: "20%" },
@@ -204,7 +206,7 @@ export const gameData: GameCardProps[] = [
     title: "Mobile Legends",
     rank: "MYTHICAL IMMORTAL",
     ign: "IGN: Gab Presko",
-    icon: <div className="p-1.5 bg-black rounded border border-white/5"><Image src="/mlb.png" alt="Mobile Legends" width={32} height={32} className="object-contain" /></div>,
+    icon: <Image src="/mel.jpg" alt="Mobile Legends" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "local heroes", value: "~10" },
       { label: "role", value: "EXP Laner" },
@@ -221,7 +223,7 @@ export const gameData: GameCardProps[] = [
     title: "CrossFire",
     rank: "VETERAN",
     ign: "IGN: Quickscope.X",
-    icon: <div className="p-1.5 bg-black rounded border border-white/5"><Image src="/cfb.png" alt="Crossfire" width={32} height={32} className="object-contain" /></div>,
+    icon: <Image src="/crossfire.jpg" alt="Crossfire" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "experience", value: "~10 years" },
     ],
@@ -237,7 +239,7 @@ export const gameData: GameCardProps[] = [
     title: "Rules of Survival",
     rank: "GRANDMASTER",
     ign: "IGN: ProfessorInSpire",
-    icon: <div className="p-1.5 bg-black rounded border border-white/5"><Image src="/rosb.png" alt="Rules of Survival" width={32} height={32} className="object-contain" /></div>,
+    icon: <Image src="/rule.jpg" alt="Rules of Survival" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "wins", value: "700+" },
     ],
@@ -253,7 +255,7 @@ export const gameData: GameCardProps[] = [
     title: "Bloodstrike",
     rank: "MYTHIC",
     ign: "IGN: NE Gabzimo",
-    icon: <div className="p-1.5 bg-black rounded border border-white/5"><Image src="/blb.png" alt="Bloodstrike" width={32} height={32} className="object-contain" /></div>,
+    icon: <Image src="/strike.jpg" alt="Bloodstrike" width={40} height={40} className="object-cover w-full h-full" />,
     stats: [
       { label: "points", value: "50,027" },
       { label: "global rank", value: "Top 151" },
