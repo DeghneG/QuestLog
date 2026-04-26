@@ -171,7 +171,7 @@ export const gameData: GameCardProps[] = [
     title: "League of Legends",
     rank: "EMERALD I",
     ign: "IGN: CSC Jeanina",
-    icon: <Image src="/league.jpg" alt="League of Legends" width={40} height={40} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
+    icon: <Image src="/league.jpg" alt="League of Legends" width={52} height={52} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
     stats: [
       { label: "matches", value: "40+" },
       { label: "peak rank", value: "Emerald I" },
@@ -188,14 +188,13 @@ export const gameData: GameCardProps[] = [
     title: "Valorant",
     rank: "ASCENDANT I",
     ign: "IGN: Gabzimoo",
-    icon: <Image src="/valorant.jpg" alt="Valorant" width={40} height={40} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
+    icon: <Image src="/valorant.jpg" alt="Valorant" width={52} height={52} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
     stats: [
       { label: "peak rank", value: "Ascendant 1" },
       { label: "headshot %", value: "20%" },
     ],
     highlights: [
       "Duelist / Controller Hybrid",
-      "Real-Time Macro Rotations/Situational",
       "Clutch Master: 500+ clutch round wins",
       "Custom Team Strats expert",
     ],
@@ -206,7 +205,7 @@ export const gameData: GameCardProps[] = [
     title: "Mobile Legends",
     rank: "MYTHICAL IMMORTAL",
     ign: "IGN: Gab Presko",
-    icon: <Image src="/mel.jpg" alt="Mobile Legends" width={40} height={40} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
+    icon: <Image src="/mel.jpg" alt="Mobile Legends" width={52} height={52} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
     stats: [
       { label: "local heroes", value: "~10" },
       { label: "role", value: "EXP Laner" },
@@ -223,7 +222,7 @@ export const gameData: GameCardProps[] = [
     title: "CrossFire",
     rank: "VETERAN",
     ign: "IGN: Quickscope.X",
-    icon: <Image src="/crossfire.jpg" alt="Crossfire" width={40} height={40} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
+    icon: <Image src="/crossfire.jpg" alt="Crossfire" width={52} height={52} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
     stats: [
       { label: "experience", value: "~10 years" },
     ],
@@ -239,7 +238,7 @@ export const gameData: GameCardProps[] = [
     title: "Rules of Survival",
     rank: "GRANDMASTER",
     ign: "IGN: ProfessorInSpire",
-    icon: <Image src="/rule.jpg" alt="Rules of Survival" width={40} height={40} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
+    icon: <Image src="/rule.jpg" alt="Rules of Survival" width={52} height={52} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
     stats: [
       { label: "wins", value: "700+" },
     ],
@@ -255,7 +254,7 @@ export const gameData: GameCardProps[] = [
     title: "Bloodstrike",
     rank: "MYTHIC",
     ign: "IGN: NE Gabzimo",
-    icon: <Image src="/strike.jpg" alt="Bloodstrike" width={40} height={40} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
+    icon: <Image src="/strike.jpg" alt="Bloodstrike" width={52} height={52} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
     stats: [
       { label: "points", value: "50,027" },
       { label: "global rank", value: "Top 151" },
