@@ -27,6 +27,8 @@ export default function Hero() {
           fill
           className="object-cover"
           priority
+          quality={100}
+          unoptimized
         />
       </motion.div>
 
