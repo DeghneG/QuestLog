@@ -170,7 +170,7 @@ export const gameData: GameCardProps[] = [
   {
     title: "League of Legends",
     rank: "EMERALD I",
-    ign: "IGN: CSC Jeanina",
+    ign: "IGN: LobLexFanboy",
     icon: <Image src="/league.jpg" alt="League of Legends" width={52} height={52} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
     stats: [
       { label: "matches", value: "40+" },
