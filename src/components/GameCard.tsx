@@ -186,11 +186,11 @@ export const gameData: GameCardProps[] = [
   },
   {
     title: "Valorant",
-    rank: "ASCENDANT I",
+    rank: "ASCENDANT III",
     ign: "IGN: Gabzimoo",
     icon: <Image src="/valorant.jpg" alt="Valorant" width={52} height={52} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
     stats: [
-      { label: "peak rank", value: "Ascendant 1" },
+      { label: "peak rank", value: "Ascendant 3" },
       { label: "headshot %", value: "20%" },
     ],
     highlights: [

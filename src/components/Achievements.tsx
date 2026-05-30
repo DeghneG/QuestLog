@@ -13,9 +13,9 @@ const achievements = [
   },
   {
     icon: <Target size={24} />,
-    title: "Ascendant I Peak",
+    title: "Ascendant III Peak",
     game: "Valorant",
-    description: "Climbed to Ascendant 1 through disciplined aim and game sense.",
+    description: "Climbed to Ascendant 3 through disciplined aim and game sense.",
   },
   {
     icon: <Award size={24} />,
