@@ -177,9 +177,8 @@ export const gameData: GameCardProps[] = [
       { label: "peak rank", value: "Emerald I" },
     ],
     highlights: [
-      "Main Champions: Jax, Zed, Yasuo",
+      "Main Champions: Viego, Yasuo, Nidalee",
       "Fast climber with high win rate in ranked",
-      "Active in college esports and local tournaments",
     ],
     description:
       "Rapid ranked climber who reached Emerald I in under 50 games — pure mechanical instinct from years of MOBA experience.",
@@ -187,7 +186,7 @@ export const gameData: GameCardProps[] = [
   {
     title: "Valorant",
     rank: "ASCENDANT III",
-    ign: "IGN: Gabzimoo",
+    ign: "IGN: HiIten",
     icon: <Image src="/valorant.jpg" alt="Valorant" width={52} height={52} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
     stats: [
       { label: "peak rank", value: "Ascendant 3" },
@@ -224,15 +223,15 @@ export const gameData: GameCardProps[] = [
     ign: "IGN: Quickscope.X",
     icon: <Image src="/crossfire.jpg" alt="Crossfire" width={52} height={52} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
     stats: [
-      { label: "experience", value: "~10 years" },
+      { label: "experience", value: "~15 years" },
     ],
     highlights: [
-      "First FPS experience — almost 10 years of competitive FPS gaming",
+      "First FPS experience — almost 15 years of competitive FPS gaming",
       "The foundation of competitive FPS reflexes and game sense",
-      "Shotgun and sniper specialist since the early days",
+      "AR and Sniper specialist since the early days",
     ],
     description:
-      "Where it all began — nearly a decade of FPS experience that built raw reflexes and a lifelong love for the genre.",
+      "Where it all began — more than a decade of FPS experience that built raw reflexes and a lifelong love for the genre.",
   },
   {
     title: "Rules of Survival",
@@ -240,11 +239,11 @@ export const gameData: GameCardProps[] = [
     ign: "IGN: ProfessorInSpire",
     icon: <Image src="/rule.jpg" alt="Rules of Survival" width={52} height={52} className="object-cover w-full h-full scale-[1.35]" quality={100} unoptimized />,
     stats: [
-      { label: "wins", value: "700+" },
+      { label: "games", value: "3000+" },
     ],
     highlights: [
-      "Pre-PUBG Mobile BR enthusiast",
-      "Tactical squad leader with 70%+ win rate in premade",
+      "Used to shit on normies in Ghili Island",
+      "1,100+ Hour",
       "Early adopter of the Battle Royale genre on mobile",
     ],
     description:

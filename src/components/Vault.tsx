@@ -28,6 +28,21 @@ const vaultGames = [
   { name: "F1 2021", category: "Racing" },
   { name: "Resident Evil Franchise", category: "Horror" },
   { name: "Left 4 Dead", category: "Survival" },
+  { name: "GTA V", category: "Sandbox" },
+  { name: "God of War Ragnarok", category: "RPG" },
+  { name: "NBA 2K26", category: "Sports" },
+  { name: "State of Decay 2", category: "Survival" },
+  { name: "Phantom Forces", category: "FPS" },
+  { name: "Dragon City", category: "Strategy" },
+  { name: "Skyrim", category: "RPG" },
+  { name: "Ghost of Tsushima", category: "RPG" },
+  { name: "Sekiro: Shadows Die Twice", category: "RPG" },
+  { name: "Apex Legends", category: "BR" },
+  { name: "Farlight 84", category: "BR" },
+  { name: "War Thunder", category: "Strategy" },
+  { name: "World of Tanks: HEAT", category: "Strategy" },
+  { name: "WildRift", category: "MOBA" },
+  { name: "God of War 3", category: "RPG" },
 ];
 
 const categories = ["All", "FPS", "MOBA", "Sandbox", "RPG", "BR", "Sports", "Fighting", "Horror", "Survival", "Puzzle", "Racing", "Strategy", "Studio"];
