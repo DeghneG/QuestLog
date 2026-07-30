@@ -52,8 +52,15 @@ export default function GameCard({
       }`}
       onClick={() => setExpanded(!expanded)}
     >
-      {/* Card header */}
-      <div className="p-5 flex-grow">
+      {/* The bouncing blob */}
+      <div className="absolute z-0 top-1/2 left-1/2 w-[150px] h-[150px] rounded-full bg-gamer-red opacity-80 blur-[24px] card-blob"></div>
+
+      {/* The frosted glass background layer */}
+      <div className="absolute inset-[2px] z-[1] bg-[#111111]/90 backdrop-blur-xl rounded-[12px] pointer-events-none"></div>
+
+      <div className="relative z-[2] flex flex-col h-full flex-grow">
+        {/* Card header */}
+        <div className="p-5 flex-grow">
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
             {icon && (
@@ -154,10 +161,12 @@ export default function GameCard({
         </motion.div>
       </div>
 
+      </div>
+
       {/* Hover red glow line at bottom */}
       <motion.div
         animate={{ opacity: hovered ? 1 : 0 }}
-        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gamer-red to-transparent"
+        className="absolute z-[3] bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gamer-red to-transparent"
       />
     </motion.div>
   );
