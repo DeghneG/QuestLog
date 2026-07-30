@@ -53,7 +53,7 @@ export default function GameCard({
       onClick={() => setExpanded(!expanded)}
     >
       {/* The bouncing blob */}
-      <div className="absolute z-0 top-1/2 left-1/2 w-[150px] h-[150px] rounded-full bg-gamer-red opacity-80 blur-[24px] card-blob"></div>
+      <div className="absolute z-0 w-[150px] h-[150px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gamer-red opacity-80 blur-[32px] card-blob"></div>
 
       {/* The frosted glass background layer */}
       <div className="absolute inset-[2px] z-[1] bg-[#111111]/90 backdrop-blur-xl rounded-[12px] pointer-events-none"></div>

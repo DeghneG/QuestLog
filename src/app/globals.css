@@ -114,9 +114,9 @@ body {
 }
 
 @keyframes blob-bounce {
-  0% { transform: translate(-100%, -100%) translate3d(0, 0, 0); }
-  25% { transform: translate(-100%, -100%) translate3d(100%, 0, 0); }
-  50% { transform: translate(-100%, -100%) translate3d(100%, 100%, 0); }
-  75% { transform: translate(-100%, -100%) translate3d(0, 100%, 0); }
-  100% { transform: translate(-100%, -100%) translate3d(0, 0, 0); }
+  0% { top: 0%; left: 0%; }
+  25% { top: 0%; left: 100%; }
+  50% { top: 100%; left: 100%; }
+  75% { top: 100%; left: 0%; }
+  100% { top: 0%; left: 0%; }
 }
